@@ -1,9 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.yi.project.ApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.985 s <<< FAILURE! - in com.yi.project.ApplicationTests
-contextLoads(com.yi.project.ApplicationTests)  Time elapsed: 0.007 s  <<< ERROR!
-java.lang.IllegalStateException: Failed to load ApplicationContext
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: NO)
-Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: NO)
-
