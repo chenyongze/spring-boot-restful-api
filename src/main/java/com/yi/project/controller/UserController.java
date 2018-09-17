@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class user {
+public class UserController {
 
     @RequestMapping(value = "/user", method= RequestMethod.GET)
     public FestFulBean<String> user(@RequestParam String username) {
