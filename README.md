@@ -1,6 +1,22 @@
 # spring-boot-restful-api
 一个基于Spring Boot &amp; MyBatis的纯净项目，用于快速构建中小型RESTful API项目~
 
+
+### 发布上线
+
+```markdown
+mvn clean package
+
+上传jar包
+
+服务器执行
+
+java -jar xxxxx.jar
+
+```
+
+
+
 ### 简介
 这个项目用于快速构建中小型RESTful API项目，摆脱重复造轮子的的过程，专注于业务代码，少加班，多陪女朋友。
 

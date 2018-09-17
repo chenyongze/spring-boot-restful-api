@@ -89,7 +89,6 @@ public class WebMvcConfigurer extends WebMvcConfigurationSupport {
                 Result result = new Result();
                 if (handler instanceof HandlerMethod) {
                     HandlerMethod handlerMethod = (HandlerMethod) handler;
-
                     //业务失败的异常，如“账号或密码错误”
                     if (e instanceof ServiceException) {
                         result.setCode(ResultCode.FAIL).setMessage(e.getMessage());
@@ -122,7 +121,7 @@ public class WebMvcConfigurer extends WebMvcConfigurationSupport {
      */
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        //registry.addMapping("/**");
+        registry.addMapping("/**");
     }
 
     /**
@@ -145,7 +144,6 @@ public class WebMvcConfigurer extends WebMvcConfigurationSupport {
                     } else {
                         logger.warn("签名认证失败，请求接口：{}，请求IP：{}，请求参数：{}",
                                 request.getRequestURI(), getIpAddress(request), JSON.toJSONString(request.getParameterMap()));
-
                         Result result = new Result();
                         result.setCode(ResultCode.UNAUTHORIZED).setMessage("签名认证失败");
                         responseResult(response, result);
@@ -177,9 +175,7 @@ public class WebMvcConfigurer extends WebMvcConfigurationSupport {
     private boolean validateSign(HttpServletRequest request, String requestSign) {
         List<String> keys = new ArrayList<String>(request.getParameterMap().keySet());
         Collections.sort(keys);
-
         String linkString = "";
-
         for (String key : keys) {
             if (!"sign".equals(key)) {
                 linkString += key + "=" + request.getParameter(key) + "&";
@@ -193,7 +189,6 @@ public class WebMvcConfigurer extends WebMvcConfigurationSupport {
         //自己修改
         String key = "Potato";
         String sign = DigestUtils.md5Hex(linkString + key);
-
         return StringUtils.equals(sign, requestSign);
 
     }
