@@ -15,6 +15,28 @@ java -jar xxxxx.jar
 
 ```
 
+### 环境配置文件
+
+```markdown
+
+
+############################################################
+#
+#
+############################################################
+spring.datasource.url=jdbc:mysql://114.215.25.201:4307/tangka_dev
+spring.datasource.username=shengle_dev
+spring.datasource.password=km3Z4JH)(kA-wwe-49Qo
+spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+spring.datasource.druid.initial-size=1
+spring.datasource.druid.min-idle=1
+spring.datasource.druid.max-active=20
+spring.datasource.druid.test-on-borrow=true
+spring.datasource.druid.stat-view-servlet.allow=true
+
+
+```
+
 
 
 ### 简介
