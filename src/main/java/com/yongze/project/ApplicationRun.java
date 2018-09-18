@@ -11,9 +11,9 @@ import tk.mybatis.spring.annotation.MapperScan;
  */
 @MapperScan({"com.yongze.project.dao"})
 @SpringBootApplication
-public class Application {
+public class ApplicationRun {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(ApplicationRun.class, args);
     }
 }

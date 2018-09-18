@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class CityContoller {
+public class CityController {
 
     @RequestMapping(value="/addCity",method= RequestMethod.GET)
     public boolean addCity() {
